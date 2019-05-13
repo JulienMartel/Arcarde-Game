@@ -3,10 +3,10 @@ const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
 const babel = require('gulp-babel');
+const concat = require('gulp-concat');
 
 // const browserSync = require('browser-sync').create()
 // const sass = require('gulp-sass');
-// const concat = require('gulp-concat');
 // const uglify = require('gulp-uglify');
 // const rename = require("gulp-rename");
 
@@ -29,9 +29,9 @@ gulp.task("img", () =>
 )
 
 gulp.task("js", () => 
-  gulp.src('src/js/**/*.js')
+  gulp.src('src/js/**/*.js' ['src/js/resources.js', 'src/js/app.js', 'src/js/engine.js'])
     .pipe(babel())
-    // .pipe(concat('all.js'))
+    .pipe(concat('main.js'))
     // .pipe(gulp.dest('dest/js'))
     // .pipe(uglify())
     // .pipe(rename("js/all.min.js"))
