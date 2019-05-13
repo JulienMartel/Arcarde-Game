@@ -1,0 +1,22 @@
+{
+  "name": "finalgitproject",
+  "version": "1.0.0",
+  "description": "### **[Play Now!](https://jubag.keybase.pub/FroggerRemake/index.html)**",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulienMartel/Arcarde-Game.git"
+  },
+  "author": "Ju",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JulienMartel/Arcarde-Game/issues"
+  },
+  "homepage": "https://github.com/JulienMartel/Arcarde-Game#readme",
+  "devDependencies": {
+    "gulp-autoprefixer": "^6.1.0"
+  }
+}
