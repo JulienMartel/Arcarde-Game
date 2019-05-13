@@ -6,20 +6,11 @@ const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 
-// const browserSync = require('browser-sync').create()
-// const sass = require('gulp-sass');
-// const rename = require("gulp-rename");
-
-
 gulp.task("styles", () => 
   gulp.src('src/css/**/*.css')
     .pipe(autoprefixer())
     .pipe(cleanCSS())
-
-    // .pipe(sass().on('error', sass.logError))
-    // .pipe(concat('styles.css'))
-    // .pipe(gulp.dest('dest/css/'))
-    // .pipe(browserSync.stream())
+    .pipe(gulp.dest('dest/css/'))
 )
 
 gulp.task("img", () => 
@@ -33,9 +24,10 @@ gulp.task("js", () =>
     .pipe(babel())
     .pipe(concat('main.js'))
     .pipe(uglify())
-    // .pipe(gulp.dest('dest/js'))
-    
-    // .pipe(rename("js/all.min.js"))
-    // .pipe(gulp.dest('dest'))
-    // .pipe(browserSync.stream())
+    .pipe(gulp.dest('dest/js'))
+)
+
+gulp.task("html", () => 
+  gulp.src('index.html')
+    .pipe(gulp.dest('dest/'))
 )
